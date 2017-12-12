@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Online Calculator</title>
+<style>
+.calc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+.row{
+  margin-top: 10px;
+}
+.cbtn{
+  margin-left: 10px;
+  width:100px;
+  height:80px;
+  font-family: sans-serif;
+  font-size: 40;
+  text-align: center;
+    border-radius: 12px;
+  background-color: darkseagreen;
+    
+}
+.display{
+  margin-left: 10px;
+  font-family:sans-serif;
+  background-color: azure;
+  height: 80px;
+  width:320px; 
+  font-size: 50;
+}
+</style>
+
+    <script type="text/javascript">
+         //const ul = document.getElementById('authors'); // Get the list where we will place our authors
+         const url = 'https://randomuser.me/api/?results=10'; // Get 10 random users
+
+
+        fetch(url)
+        .then(function(data) {
+   alert(data);
+    })
+  
+  .catch(function(error) {
+    // If there is any error you will catch them here
+  }); 
+    </script>
+</head>
+
+<body  text= "gold">
+<div class="calc">
+<form name="calculator" action="/calculator">
+<div class="row">
+<input type="reset"  class = "cbtn" value="C">
+<input type="text" name="ans"  class ="display" value=""><br>
+</div>
+<div class="row">
+<input type="button" class = "cbtn" value="1" onClick="document.calculator.ans.value+='1'">
+<input type="button" class = "cbtn" value="2" onClick="document.calculator.ans.value+='2'">
+<input type="button" class = "cbtn" value="3" onClick="document.calculator.ans.value+='3'">
+<input type="button" class = "cbtn" value="+" onClick="document.calculator.ans.value+='+'">
+</div>
+<br>
+<div class="row">
+<input type="button" class = "cbtn" value="4" onClick="document.calculator.ans.value+='4'">
+<input type="button" class = "cbtn" value="5" onClick="document.calculator.ans.value+='5'">
+<input type="button" class = "cbtn" value="6" onClick="document.calculator.ans.value+='6'">
+<input type="button" class = "cbtn" value="-" onClick="document.calculator.ans.value+='-'">
+</div>
+<br>
+<div class="row">
+<input type="button" class = "cbtn" value="7" onClick="document.calculator.ans.value+='7'">
+<input type="button" class = "cbtn" value="8" onClick="document.calculator.ans.value+='8'">
+<input type="button" class = "cbtn" value="9" onClick="document.calculator.ans.value+='9'">
+<input type="button" class = "cbtn" value="*" onClick="document.calculator.ans.value+='*'">
+</div>
+<br>
+<div class="row">
+<input type="button" class = "cbtn" value="/" onClick="document.calculator.ans.value+='/'">
+<input type="button" class = "cbtn" value="0" onClick="document.calculator.ans.value+='0'">
+<input type="button" class = "cbtn" value="." onClick="document.calculator.ans.value+='.'">
+<input type="submit" class = "cbtn" value="=">
+</div>
+
+</form>
+</div>
+</body>
+</html>
